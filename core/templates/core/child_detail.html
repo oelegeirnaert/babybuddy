@@ -10,7 +10,7 @@
 {% block content %}
     <div class="child-detail-column">
         <div class="row">
-            <div class="col-lg-4 col-md-6 pb-3 text-center">
+            <div class="col-lg-4 col-md-6 pb-3 z-1 text-center">
                 {% if object.picture %}
                     {% thumbnail '150x150' object.picture as thumb %}
                         <img src="{{ thumb.url }}" class="child-photo img-fluid rounded-circle" />
@@ -29,6 +29,6 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-8 offset-lg-4 col-md-6 offset-md-6">{% include 'timeline/_timeline.html' %}</div>
+            <div class="col-lg-8 offset-lg-4 col-md-6 offset-md-6 z-1">{% include 'timeline/_timeline.html' %}</div>
         </div>
     {% endblock %}
